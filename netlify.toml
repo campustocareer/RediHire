@@ -1,21 +1,12 @@
-functionsDirectory = "D:\\Redihire\\Redihire_Core\\project\\netlify\\functions"
-functionsDirectoryOrigin = "config"
-plugins = []
-headers = []
-
 [build]
-publish = "D:\\Redihire\\Redihire_Core\\project\\dist"
-publishOrigin = "ui"
-commandOrigin = "ui"
-command = "yarn run build"
-functions = "D:\\Redihire\\Redihire_Core\\project\\netlify\\functions"
+  command = "npm run build"
+  publish = "build"  # or "dist" based on framework
 
 [functions]
-  node_bundler = "esbuild"
+  directory = "netlify/functions"
   external_node_modules = ["nodemailer"]
 
 [[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200.0
-force = false
+  from = "/*"
+  to = "/index.html"
+  status = 200
