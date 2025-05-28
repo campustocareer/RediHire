@@ -1,0 +1,53 @@
+# === Node.js ===
+node_modules/
+package-lock.json
+yarn.lock
+.pnpm-debug.log
+
+# === Build directories ===
+.next/
+dist/
+out/
+coverage/
+.vite/
+.vite-temp/
+.vercel/
+
+# === Logs and Debug ===
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+debug.log
+
+# === Environment Files ===
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# === OS/System Files ===
+.DS_Store
+Thumbs.db
+
+# === Netlify ===
+.netlify/
+netlify/
+
+# === Vite & Next Cache ===
+.cache/
+*.local
+
+# === Compiled output ===
+*.tsbuildinfo
+*.log
+*.map
+
+# === Editor & IDE files ===
+.vscode/
+.idea/
+
+# === Custom/Tool-Specific ===
+.bolt/
+components.json
+project-structure.txt
