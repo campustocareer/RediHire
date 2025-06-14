@@ -116,7 +116,7 @@ const Header: React.FC = () => {
             Contact Us
           </Link>
             <Link to="/carrerspage" className={`nav-link ${isActive('/carrerspage') ? 'active-nav-link' : ''}`}>
-            Carrers
+            Careers
           </Link>
         </nav>
 

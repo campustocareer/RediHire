@@ -6,7 +6,6 @@ yarn.lock
 
 # === Build directories ===
 .next/
-dist/
 out/
 coverage/
 .vite/
@@ -32,7 +31,6 @@ Thumbs.db
 
 # === Netlify ===
 .netlify/
-netlify/
 
 # === Vite & Next Cache ===
 .cache/
