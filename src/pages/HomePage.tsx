@@ -401,30 +401,27 @@ const HomePage: React.FC = () => {
             className="w-full"
           >
             {[
-              { logo: "/Logo/Clients/connectraz.png", url: "https://www.redihire.com" },
-              { logo: "/Logo/Clients/awign.png", url: "https://www.redihire.com" },
-              { logo: "/Logo/Clients/malayaj.png", url: "https://www.redihire.com" },
-              { logo: "/Logo/Clients/cbspl.png", url: "https://www.redihire.com" },
-              { logo: "/Logo/Clients/quicksilver.png", url: "https://www.redihire.com" },
-              { logo: "/Logo/Clients/kcs.png", url: "https://www.redihire.com" },
-              { logo: "/Logo/Clients/dncs.png", url: "https://www.redihire.com" },
+              { logo: "/Logo/Clients/connectraz.png" },
+              { logo: "/Logo/Clients/awign.png" },
+              { logo: "/Logo/Clients/malayaj.png" },
+              { logo: "/Logo/Clients/cbspl.png" },
+              { logo: "/Logo/Clients/quicksilver.png" },
+              { logo: "/Logo/Clients/kcs.png" },
+              { logo: "/Logo/Clients/dncs.png" },
             ].map((client, index) => (
               <SwiperSlide key={index} className="flex justify-center items-center">
-                <motion.a
-                  href={client.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <motion.div
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ type: "spring", stiffness: 200 }}
-                  className="block"
+                  className="block cursor-pointer"
                 >
                   <img
                     src={client.logo}
                     alt={`Client ${index}`}
                     className="h-20 sm:h-24 object-contain opacity-80 hover:opacity-100 transition duration-300 ease-in-out"
                   />
-                </motion.a>
+                </motion.div>
               </SwiperSlide>
             ))}
           </Swiper>
