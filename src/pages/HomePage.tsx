@@ -366,7 +366,70 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
+      {/* Clients Carousel Section */}
+      <section className="section bg-transparent">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Clients</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Trusted by forward-thinking companies worldwide
+            </p>
+          </motion.div>
 
+          <Swiper
+            modules={[Autoplay]}
+            autoplay={{
+              delay: 0,
+              disableOnInteraction: false,
+            }}
+            speed={4000}
+            loop={true}
+            grabCursor={true}
+            slidesPerView={5}
+            spaceBetween={30}
+            breakpoints={{
+              320: { slidesPerView: 2, spaceBetween: 20 },
+              640: { slidesPerView: 3, spaceBetween: 30 },
+              1024: { slidesPerView: 5, spaceBetween: 40 },
+            }}
+            className="w-full"
+          >
+            {[
+              { logo: "/Logo/Clients/connectraz.png", url: "https://www.redihire.com" },
+              { logo: "/Logo/Clients/awign.png", url: "https://www.redihire.com" },
+              { logo: "/Logo/Clients/malayaj.png", url: "https://www.redihire.com" },
+              { logo: "/Logo/Clients/cbspl.png", url: "https://www.redihire.com" },
+              { logo: "/Logo/Clients/quicksilver.png", url: "https://www.redihire.com" },
+              { logo: "/Logo/Clients/kcs.png", url: "https://www.redihire.com" },
+              { logo: "/Logo/Clients/dncs.png", url: "https://www.redihire.com" },
+            ].map((client, index) => (
+              <SwiperSlide key={index} className="flex justify-center items-center">
+                <motion.a
+                  href={client.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ type: "spring", stiffness: 200 }}
+                  className="block"
+                >
+                  <img
+                    src={client.logo}
+                    alt={`Client ${index}`}
+                    className="h-20 sm:h-24 object-contain opacity-80 hover:opacity-100 transition duration-300 ease-in-out"
+                  />
+                </motion.a>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </section>
       {/* Features Section - Infinite Horizontal Carousel */}
       <section className="section overflow-hidden">
         <div className="container">
